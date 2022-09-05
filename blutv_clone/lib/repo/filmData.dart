@@ -1,0 +1,47 @@
+// ignore_for_file: file_names
+
+class Films {
+  
+  Future<List<Filmler>> filmleriGetir() async{
+    var filmlerListesi= <Filmler>[];
+
+    var f1 = Filmler(filmId: 1,  filmResimAdi: "jonh_wick.png", );
+    var f2 = Filmler(filmId: 2,  filmResimAdi: "jonh_wick.png" );
+    var f3 = Filmler(filmId: 3,  filmResimAdi: "jonh_wick.png" );
+    var f4 = Filmler(filmId: 4,  filmResimAdi: "jonh_wick.png", );
+    var f5 = Filmler(filmId: 5,  filmResimAdi: "jonh_wick.png", );
+    var f6 = Filmler(filmId: 6,  filmResimAdi: "jonh_wick.png" );
+    var f7 = Filmler(filmId: 1,  filmResimAdi: "jonh_wick.png");
+    var f8 = Filmler(filmId: 2,  filmResimAdi: "jonh_wick.png");
+    var f9 = Filmler(filmId: 3,  filmResimAdi: "jonh_wick.png" );
+    var f10 = Filmler(filmId: 4,  filmResimAdi: "jonh_wick.png", );
+    var f11= Filmler(filmId: 5,  filmResimAdi: "jonh_wick.png" );
+    var f12 = Filmler(filmId: 6,  filmResimAdi:"jonh_wick.png" );
+
+    filmlerListesi.add(f1);
+    filmlerListesi.add(f2);
+    filmlerListesi.add(f3);
+    filmlerListesi.add(f4);
+    filmlerListesi.add(f5);
+    filmlerListesi.add(f6);
+    filmlerListesi.add(f7);
+    filmlerListesi.add(f8);
+    filmlerListesi.add(f9);
+    filmlerListesi.add(f10);
+    filmlerListesi.add(f11);
+    filmlerListesi.add(f12);
+
+    return filmlerListesi;
+  }
+
+}
+class Filmler {
+  int filmId;
+  String filmResimAdi;
+
+Filmler({
+    required this.filmId,
+    required this.filmResimAdi,
+  });
+
+}
