@@ -62,26 +62,53 @@ class _HomePageState extends State<HomePage> {
       child: Scaffold(
         
         
-        appBar: AppBar(
+        
+       // appBar: AppBar(
           
           
-          backgroundColor: bgColor,
-          bottom: const TabBar(
-            
+          
+          //backgroundColor: bgColor,
+          appBar:  TabBar(
+                     
             isScrollable: true,
-            indicatorColor: Colors.white,
-            labelPadding: EdgeInsets.only(left:20,right:50,top: 15,bottom: 15),
-
-            tabs: [
-            Tab(icon: Icon(BlutvIcon.blutvicon) ,),
-            Tab(icon: Text("Film", style: TextStyle(fontFamily: "Regular", fontSize: 18),),),
-            Tab(icon: Text("Dizi", style: TextStyle(fontFamily: "Regular", fontSize: 18),),),
-            Tab(icon: Icon(BlutvIcon.kids),)
+            indicator: UnderlineTabIndicator(
+              borderSide: BorderSide(width: 3.0,color: Colors.white,),
+              insets: EdgeInsets.symmetric(horizontal: 15),
+              
+            ),
+            labelPadding: EdgeInsets.only(left:20.0,top:30,right: 35),
+            padding: EdgeInsets.only(right:15,left:5),
+            indicatorPadding: EdgeInsets.only(top:10.0),
+           
+          
+            tabs:<Widget> [
+            SizedBox( 
+              //height: 25,
+              width: 45,
+              child: Padding(
+              
+                
+                padding: const EdgeInsets.only(right:10.0,),
+                child: Tab(icon: Icon(BlutvIcon.blutvicon,size: 18,) ,iconMargin: EdgeInsets.all(100) ,),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Tab(icon: Text("Film", style: TextStyle(fontFamily: "Regular", fontSize: 15),),),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(right:10.0,left:10.0),
+              child: Tab(icon: Text("Dizi", style: TextStyle(fontFamily: "Regular", fontSize: 15),textAlign: TextAlign.center),),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(right:10.0,left:10.0),
+              child: Tab(icon: Icon(BlutvIcon.kids), )
+            )
           ],
           ),
          
         
-      ),
+      //),
         
         body:        
          FutureBuilder<List<Filmler>>(
@@ -107,13 +134,17 @@ class _HomePageState extends State<HomePage> {
                   
                   var film = filmlerListesi[index];
     
-                  return  Container(
-                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), 
-                    image:DecorationImage(image:AssetImage("images/${film.filmResimAdi}"), 
-                    fit: BoxFit.fill )  ),
-                    margin: EdgeInsets.all(5.0),
-                    
-                    
+                  return  InkWell(
+                    borderRadius: BorderRadius.circular(10),
+                    onTap:() => setState(()=> print("Tıklandı") ),
+                    child: Container(
+                      decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), 
+                      image:DecorationImage(image:AssetImage("images/${film.filmResimAdi}"), 
+                      fit: BoxFit.fill )  ),
+                      margin: EdgeInsets.all(5.0), 
+                      
+                      
+                    ),
                   );
                     
                   
