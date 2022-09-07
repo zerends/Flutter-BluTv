@@ -3,7 +3,7 @@
 A new Flutter project.
 
 
-[BluTv-SezginDenizZeren](https://user-images.githubusercontent.com/54589193/188801773-d6cd0bab-2345-4a2f-9ff7-5d71bd70b48d.png)
+![BluTv-SezginDenizZeren](https://user-images.githubusercontent.com/54589193/188802340-d4ed5c26-29aa-4965-8261-a139a235ef9a.png)
 
 
 
